@@ -27,8 +27,18 @@ if (isset($_POST["btnregistrar"])) {
     } else {
         // Si algún campo está vacío, mostramos una advertencia al usuario
         echo "<div class='alert alert-warning' role='alert'>Todos los campos deben estar registrados</div>";
-    }
-}
+    } ?>
+     <script>
+    // Esta línea de JavaScript reemplaza el estado de la historia del navegador sin recargar la página.
+    // history.replaceState() cambia la URL actual, eliminando cualquier parámetro GET sin afectar el historial de navegación.
+    // null: No se cambia el estado.
+    // null: No se modifica el título de la página.
+    // location.pathname: Mantiene la URL base (sin parámetros) sin recargar la página.
+    history.replaceState(null, null, location.pathname);
+    </script>
+
+
+  <?php }
 ?>
 
 
