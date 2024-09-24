@@ -1,7 +1,12 @@
+<?php
+$page = isset($_GET['page']) ? $_GET['page'] : 1; // Detecta la página actual, por ejemplo ?page=1
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="style.css">
   <!-- Establece el conjunto de caracteres como UTF-8 para manejar todos los caracteres correctamente -->
   <meta charset="UTF-8">
   <!-- Ajusta el diseño a la pantalla del dispositivo -->
@@ -15,6 +20,8 @@
   <!-- Incluye Bootstrap para darle estilo a la página -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   
+  
+
   <!-- Incluye iconos de FontAwesome -->
   <script src="https://kit.fontawesome.com/99e2bc0140.js" crossorigin="anonymous"></script>
 </head>

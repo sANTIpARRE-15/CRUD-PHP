@@ -1,3 +1,7 @@
+<?php
+$page = isset($_GET['page']) ? $_GET['page'] : 2; // Detecta la página actual, por ejemplo ?page=1
+?>
+
 <?php  
 // Incluimos el archivo que establece la conexión con la base de datos
 include "modelo/conexion.php";
@@ -11,6 +15,8 @@ $sql = $conexion->query("SELECT * FROM personas WHERE id_persona = $id");
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <!-- Establece el conjunto de caracteres como UTF-8 para admitir todos los caracteres -->
     <meta charset="UTF-8">
     <!-- Configura la visualización para que sea responsive -->
@@ -21,7 +27,7 @@ $sql = $conexion->query("SELECT * FROM personas WHERE id_persona = $id");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="page-<?php echo $page; ?>"> 
     
     <!-- Formulario para modificar los datos de la persona -->
     <form class="col-5 m-4 m-auto" method="post">
